@@ -92,9 +92,9 @@ class PhoneBookPage extends Component {
                     firstName: "",
                     lastName: ""
                 },
-                showContactOverlay: true,
+                showContactOverlay: this.state.showContactOverlay,
                 style: { width: "100%" },
-                showPhoneBookUserOverlay: this.state.showPhoneBookUserOverlay,
+                showPhoneBookUserOverlay: true,
                 phoneBookList: this.state.phoneBookList,
                 loading: this.state.loading,
                 editUser: this.state.editUser,
@@ -208,7 +208,9 @@ class PhoneBookPage extends Component {
             <div>
                 <div className="row">
                     <div className="col"><h1 id="tabelLabel">Phone Book</h1></div>
-                    <div className="col" data-toggle="tooltip"><p data-placement="bottom" title="Add new phone book user." className="bi bi-plus-circle" onClick={(e) => this.handlePhoneBookUserOverlay(e, null, false)}></p></div>
+                    <div className="col" data-toggle="tooltip">
+                        <p data-placement="bottom" title="Add new phone book user." className="bi bi-plus-circle" onClick={(e) => this.handlePhoneBookUserOverlay(e, null, false)}></p>
+                    </div>
                 </div>
                 {contents}
                 {!this.state.showPhoneBookUserOverlay ? "" : <PhoneBookUserOverlay
@@ -333,6 +335,9 @@ class PhoneBookUserOverlay extends React.Component {
                 </div>}
                 <p className="closebtn" onClick={this.closeNav}>&times;</p>
                 <div className="overlay-content">
+                    <div className="col-md-12 col-lg-12">
+                        <h1>Phone Book User Page</h1>
+                    </div>
                     <form className="col-lg-6 offset-lg-3">
                         <div className="form-group">
                             <label htmlFor="firstName">First Name</label>
@@ -340,11 +345,9 @@ class PhoneBookUserOverlay extends React.Component {
                                 type="text"
                                 className="form-control"
                                 id="firstName"
-                                aria-describedby="firstNameHelp"
                                 placeholder="Enter first name"
                                 value={this.state.newPhoneBookUserDetails.firstName}
                                 onChange={this.handleFirstNameChange} />
-                            <small id="firstNameHelp" className="form-text text-muted">We'll never share your first name with anyone else.</small>
                         </div>
                         <div className="form-group">
                             <label htmlFor="lastName">Last Name</label>
@@ -352,12 +355,10 @@ class PhoneBookUserOverlay extends React.Component {
                                 type="text"
                                 className="form-control"
                                 id="lastName"
-                                aria-describedby="lastNameHelp"
                                 placeholder="Enter last name"
                                 value={this.state.newPhoneBookUserDetails.lastName}
                                 onChange={this.handleLastNameChange}
                             />
-                            <small id="lastNameHelp" className="form-text text-muted">We'll never share your last name with anyone else.</small>
                         </div>
                         <button type="submit" className="btn btn-primary" onClick={this.handlePhoneBookUser}> Submit </button>
                     </form>
@@ -565,14 +566,16 @@ class ContactOverlay extends React.Component {
                 </div>}
                 <p className="closebtn" onClick={this.closeNav}>&times;</p>
                 <div className="overlay-content">
+                    <div className="col-md-12 col-lg-12">
+                        <h1>Contact Page</h1>
+                    </div>
                     <form className="col-lg-6 offset-lg-3">
                         <div className="form-group">
-                            <label htmlFor="phoneUserId">Phone user id</label>
+                            <label htmlFor="phoneUserId">Phone User Id</label>
                             <input
                                 type="number"
                                 className="form-control"
                                 id="phoneUserId"
-                                aria-describedby="phoneUserIdHelp"
                                 placeholder="Enter Phone Number"
                                 value={this.state.newContactDetails.phoneUserId}
                                 readOnly />
@@ -583,11 +586,9 @@ class ContactOverlay extends React.Component {
                                 type="text"
                                 className="form-control"
                                 id="contactfirstName"
-                                aria-describedby="firstNameHelp"
                                 placeholder="Enter first name"
                                 value={this.state.newContactDetails.firstName}
                                 onChange={this.handleContactFirstNameChange} />
-                            <small id="firstNameHelp" className="form-text text-muted">We'll never share your first name with anyone else.</small>
                         </div>
                         <div className="form-group">
                             <label htmlFor="contactLastName">Last Name</label>
@@ -595,11 +596,9 @@ class ContactOverlay extends React.Component {
                                 type="text"
                                 className="form-control"
                                 id="contactLastName"
-                                aria-describedby="lastNameHelp"
                                 placeholder="Enter last name"
                                 value={this.state.newContactDetails.lastName}
                                 onChange={this.handleContactLastNameChange} />
-                            <small id="lastNameHelp" className="form-text text-muted">We'll never share your first name with anyone else.</small>
                         </div>
                         <div className="form-group">
                             <label htmlFor="phoneNumber">Phone Number</label>
@@ -611,7 +610,6 @@ class ContactOverlay extends React.Component {
                                 placeholder="Enter Phone Number"
                                 value={this.state.newContactDetails.phoneNumber}
                                 onChange={this.handlePhoneNumberChange} />
-                            <small id="phoneNumberHelp" className="form-text text-muted">We'll never share your first name with anyone else.</small>
                         </div>
                         <button type="submit" className="btn btn-primary" onClick={this.handleContact}>Submit</button>
                     </form>
