@@ -14,10 +14,10 @@
 ### Phone Book User Page
 THis is the page in which a user gets added.
 
-![image info](./images/phonebookuser_webpage.png)
+![image info](./images/phonebookuser_webpage.PNG)
 
 ### Phone Book User Contacts
-![image info](./images/phonebookcontact_webpage.png)
+![image info](./images/phonebookcontact_webpage.PNG)
 
 ## Built with 
 
