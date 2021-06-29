@@ -1,4 +1,4 @@
-# ![WebApp](https://github.com/NhlaksMaestro/PhoneBookDummy/blob/main/images/phonebook_webpage.png?raw=true)
+# ![image info](./images/phonebook_webpage.png)
 # WebApp
 <table>
 <tr>
@@ -14,10 +14,10 @@
 ### Phone Book User Page
 THis is the page in which a user gets added.
 
-![](https://github.com/NhlaksMaestro/PhoneBookDummy/blob/main/images/phonebookuser_webpage.png?raw=true)
+![image info](./images/phonebookuser_webpage.png)
 
 ### Phone Book User Contacts
-![](https://github.com/NhlaksMaestro/PhoneBookDummy/blob/main/images/phonebookcontact_webpage.png?raw=true)
+![image info](./images/phonebookcontact_webpage.png)
 
 ## Built with 
 
