@@ -14,10 +14,10 @@
 ### Phone Book User Page
 THis is the page in which a user gets added.
 
-![](https://github.com/NhlaksMaestro/PhoneBookDummy/blob/main/images/phonebookuser_webpage.png)
+![](https://github.com/NhlaksMaestro/PhoneBookDummy/blob/main/images/phonebookuser_webpage.png?raw=true)
 
 ### Phone Book User Contacts
-![](https://github.com/NhlaksMaestro/PhoneBookDummy/blob/main/images/phonebookcontact_webpage.png)
+![](https://github.com/NhlaksMaestro/PhoneBookDummy/blob/main/images/phonebookcontact_webpage.png?raw=true)
 
 ## Built with 
 
